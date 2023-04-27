@@ -98,4 +98,27 @@ const Container = styled.div`
 .previous,.next,.state{
     font-size:2rem;
 }
+@media screen and (max-width:700px){
+    .previous,.next,.state{
+        font-size:1rem;
+    }
+    .shuffle{
+        margin-left: 2rem;
+        font-size: 1rem
+    }
+}
+@media screen and (max-width:355px){
+    .previous,.next,.state{
+        font-size:1rem;
+    }
+    .shuffle{
+        display: none
+    }
+    .repeat{
+        display: none;
+    }
+    .previous{
+        margin-left: 2rem;
+    }
+}
 `;

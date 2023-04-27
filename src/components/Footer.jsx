@@ -24,8 +24,6 @@ justify-content: center;
 padding: 0 1rem;
 
 @media screen and (max-width: 700px){
-  
- .PlayerControls, 
  .volume{
   display: none;
  }
