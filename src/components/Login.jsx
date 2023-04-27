@@ -35,9 +35,10 @@ const Container = styled.div`
   height: 100vh;
   width: 100vw;
   background-color: #1db954;
+  margin: 0 auto;
   gap: 5rem;
   img{
-    height: 20vh;
+    width: 30vw;
     margin: 0 auto;
   }
   button{
@@ -51,13 +52,11 @@ const Container = styled.div`
   }
   @media screen and (max-width: 700px){
     img{
-      width: 60vw;
-      height: 15vh
+      width: 30vw;
+      
     }
     button{
       margin: 0 auto;
-      width: 60vw;
-      height: 15vh
       font-size: 7vw
     }
   }
