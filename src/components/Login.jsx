@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export default function Login() {
   const handleClick = () => {
     const clientId = "99485399b9b44bd89d0118aa99422069";
-    const redirectUrl = "https://spotify-clone-five-tau.vercel.app/" || "http://localhost:3000/";
+    const redirectUrl = "https://spotify-clone-five-tau.vercel.app/";
     const apiUrl = "https://accounts.spotify.com/authorize";
     const scope = [
       "user-read-email",
@@ -51,12 +51,13 @@ const Container = styled.div`
   }
   @media screen and (max-width: 700px){
     img{
-      max-width: 100vw;
+      width: 60vw;
+      height: 15vh
     }
     button{
-      margin: 0 3rem;
-      max-width: 100vw;
-      
+      margin: 0 auto;
+      width: 60vw;
+      height: 15vh
       font-size: 7vw
     }
   }
