@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-
+// "https://spotify-clone-five-tau.vercel.app/" || 
 export default function Login() {
   const handleClick = () => {
     const clientId = "99485399b9b44bd89d0118aa99422069";
-    const redirectUrl = "https://spotify-clone-five-tau.vercel.app/";
+    const redirectUrl = "http://localhost:3000/";
     const apiUrl = "https://accounts.spotify.com/authorize";
     const scope = [
       "user-read-email",
@@ -38,6 +38,7 @@ const Container = styled.div`
   gap: 5rem;
   img{
     height: 20vh;
+    margin: 0 auto;
   }
   button{
     padding: 1rem 5rem;
@@ -47,5 +48,16 @@ const Container = styled.div`
     color:#49f585;
     font-size: 1.4rem;
     cursor: pointer;
+  }
+  @media screen and (max-width: 700px){
+    img{
+      max-width: 100vw;
+    }
+    button{
+      margin: 0 3rem;
+      max-width: 100vw;
+      
+      font-size: 7vw
+    }
   }
 `

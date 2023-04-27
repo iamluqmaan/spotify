@@ -15,7 +15,7 @@ export default function Sidebar() {
                 <li>
                     <MdHomeFilled />
                     <span>Home</span>
-                    </li>
+                </li>
                 <li>
                     <MdSearch />
                     <span>Search</span>
@@ -64,7 +64,12 @@ width: 100%;
             }
         }
     }
+
+    @media (max-width: 700px) {
+        
+        ul li span{
+           display: none
+        }
+        max-width:
 }
-
-
 `;

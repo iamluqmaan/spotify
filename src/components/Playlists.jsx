@@ -73,4 +73,9 @@ ul{
           color:white
       }
   }
+  @media (max-width: 700px) {
+    li{
+        font-size: 2.5vw;
+    }
+ }
   `;

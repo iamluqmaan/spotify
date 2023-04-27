@@ -3,6 +3,7 @@ import Login from './components/Login';
 import Spotify from './components/Spotify';
 import { reducerCases } from './utilities/Constant';
 import { useStateProvider } from './utilities/StateProvider';
+import './App.css'
 
 export default function App() {
   const [{token},dispatch] = useStateProvider()
@@ -14,7 +15,7 @@ export default function App() {
     }
   },[token, dispatch]);
   return (
-    <div>
+    <div className='loginPage'>
       {
         token ? <Spotify /> : <Login />
       }

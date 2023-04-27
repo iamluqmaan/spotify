@@ -51,16 +51,29 @@ const Container = styled.div`
 .track{
     display: flex;
     align-items: center;
+    width: 100%;
     gap:1rem;
     &_info{
         display: flex;
         flex-direction: column;
-        gap: 0.3rem;
+
         h4{
             color: white;
+            font-size: 1vw;
+            margin-bottom: 0;
         }
         h6{
             color: #b3b3b3;
+            font-size: 1vw;
+            margin-top: 8px;
+        }
+    }
+}
+@media screen and (max-width:700px){
+    .track{
+        font-size: 5rem
+        h4{
+            min-font-size: 30px
         }
     }
 }

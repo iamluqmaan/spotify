@@ -142,7 +142,7 @@ const playTrack = async (
                         </div>  
                       </div>
                       <div className="col">
-                        <span>{album}</span>
+                        <span className='album'>{album}</span>
                       </div>
                       <div className="col">
                         <span>{msToMinutesAndSeconds( duration )}</span>
@@ -205,6 +205,7 @@ const Container = styled.div`
     margin-bottom: 5rem;
     .row{
       padding: 0.5rem 1rem;
+      margin: 0 1rem;
       display: grid;
       grid-template-columns:0.3fr 3.1fr 1.9fr 0.1fr;
       &:hover{
@@ -218,6 +219,10 @@ const Container = styled.div`
           height: 40px;
         }
       }
+      .album{
+        font-size: 1.5vw
+        min-width: 1.5rem
+      }
       .detail{
         display: flex;
         gap: 1rem;
@@ -229,4 +234,63 @@ const Container = styled.div`
     }
   }
 }
+  @media (max-width: 700px) {
+    // styles for mobile devices
+    .playlist {
+      margin: 0 1rem;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      .image {
+        img {
+          height: 10rem;
+        }
+      }
+      .details {
+        text-align: center;
+        .title {
+          font-size: 3rem;
+        }
+      }
+    }
+
+    .list {
+      .header_row {
+        display: none;
+      }
+      .tracks {
+        .row {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.5rem;
+          .col {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &.detail {
+              .image {
+                margin-right: 0.5rem;
+                img {
+                  height: 5rem;
+                }
+              }
+              .info {
+                text-align: center;
+                .name {
+                  font-size: 1.1em;
+                  min-width: 5vw;
+                }
+                span {
+                  font-size: 1em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
 `;

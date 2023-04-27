@@ -32,6 +32,6 @@ const Container = styled.div`
         width: 15rem;
         border-radius: 2rem;
         height: 0.5rem;
-
+        
     }
 `;

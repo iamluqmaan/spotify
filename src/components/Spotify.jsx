@@ -42,7 +42,7 @@ export default function Spotify() {
     return (
     <Container>
         <div className="spotify_body">
-            <Sidebar />
+            <span className='sidebar'><Sidebar /></span>
             <div className="body" ref={bodyRef} onScroll={bodyScrolled}>
                 
                 <Navbar navBackground= {navBackground} />
@@ -59,29 +59,45 @@ export default function Spotify() {
   )
 }
 const Container = styled.div`
-max-width: 100vw;
-max-height: 100vh;
-overflow: hidden;
-display: grid;
-grid-template-rows: 85vh 15vh;
-.spotify_body{
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 85vh 15vh;
+
+  .spotify_body {
     display: grid;
     grid-template-columns: 15vw 85vw;
     height:100%;
     width:100%;
     background:linear-gradient(transparent, rgba(0,0,0,1));
     background-color: rgb(32,87,100);
-    .body{
-    height:100%;
-    width:100%;
-    overflow: auto;    
-    &::-webkit-scrollbar {
+
+    .body {
+      height:100%;
+      width:100%;
+      overflow: auto;    
+      
+      &::-webkit-scrollbar {
         width: 0.7rem;
         &-thumb{
           background-color:rgba(255,255,255,0.6);
         }
       }
     }
-}
 
+    @media screen and (max-width: 700px) {
+      /* Media query for mobile view */
+      .spotify_body {
+        display: block;
+        grid-template-rows: 1fr 1fr;
+        height: 100%
+        width: 100%
+      }
+     
+      .body {
+        height: calc(100vh - 120px);
+      }
+    }
+  }
 `;
