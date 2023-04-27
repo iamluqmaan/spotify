@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-// "https://spotify-clone-five-tau.vercel.app/" || 
+ 
 export default function Login() {
   const handleClick = () => {
     const clientId = "99485399b9b44bd89d0118aa99422069";
-    const redirectUrl = "http://localhost:3000/";
+    const redirectUrl = "https://spotify-clone-five-tau.vercel.app/" || "http://localhost:3000/";
     const apiUrl = "https://accounts.spotify.com/authorize";
     const scope = [
       "user-read-email",
